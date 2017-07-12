@@ -59,6 +59,7 @@ public class AddressbookFactoryImpl extends EFactoryImpl implements AddressbookF
 			case AddressbookPackage.ADDRESS_BOOK: return createAddressBook();
 			case AddressbookPackage.GROUP: return createGroup();
 			case AddressbookPackage.CONTACT: return createContact();
+			case AddressbookPackage.POSITION: return createPosition();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,6 +93,16 @@ public class AddressbookFactoryImpl extends EFactoryImpl implements AddressbookF
 	public Contact createContact() {
 		ContactImpl contact = new ContactImpl();
 		return contact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Position createPosition() {
+		PositionImpl position = new PositionImpl();
+		return position;
 	}
 
 	/**

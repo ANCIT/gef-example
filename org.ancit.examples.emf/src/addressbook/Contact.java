@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link addressbook.Contact#getName <em>Name</em>}</li>
+ *   <li>{@link addressbook.Contact#getPosition <em>Position</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,5 +47,31 @@ public interface Contact extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Position</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Position</em>' containment reference.
+	 * @see #setPosition(Position)
+	 * @see addressbook.AddressbookPackage#getContact_Position()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Position getPosition();
+
+	/**
+	 * Sets the value of the '{@link addressbook.Contact#getPosition <em>Position</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Position</em>' containment reference.
+	 * @see #getPosition()
+	 * @generated
+	 */
+	void setPosition(Position value);
 
 } // Contact

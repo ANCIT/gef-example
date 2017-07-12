@@ -131,13 +131,22 @@ public interface AddressbookPackage extends EPackage {
 	int GROUP__CONTACTS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__POSITION = 2;
+
+	/**
 	 * The number of structural features of the '<em>Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_FEATURE_COUNT = 2;
+	int GROUP_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Group</em>' class.
@@ -168,13 +177,22 @@ public interface AddressbookPackage extends EPackage {
 	int CONTACT__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTACT__POSITION = 1;
+
+	/**
 	 * The number of structural features of the '<em>Contact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTACT_FEATURE_COUNT = 1;
+	int CONTACT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Contact</em>' class.
@@ -184,6 +202,71 @@ public interface AddressbookPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTACT_OPERATION_COUNT = 0;
+
+
+	/**
+	 * The meta object id for the '{@link addressbook.impl.PositionImpl <em>Position</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see addressbook.impl.PositionImpl
+	 * @see addressbook.impl.AddressbookPackageImpl#getPosition()
+	 * @generated
+	 */
+	int POSITION = 3;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION__X = 0;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION__Y = 1;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION__W = 2;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION__H = 3;
+
+	/**
+	 * The number of structural features of the '<em>Position</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Position</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_OPERATION_COUNT = 0;
 
 
 	/**
@@ -251,6 +334,17 @@ public interface AddressbookPackage extends EPackage {
 	EReference getGroup_Contacts();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link addressbook.Group#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Position</em>'.
+	 * @see addressbook.Group#getPosition()
+	 * @see #getGroup()
+	 * @generated
+	 */
+	EReference getGroup_Position();
+
+	/**
 	 * Returns the meta object for class '{@link addressbook.Contact <em>Contact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -270,6 +364,71 @@ public interface AddressbookPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getContact_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link addressbook.Contact#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Position</em>'.
+	 * @see addressbook.Contact#getPosition()
+	 * @see #getContact()
+	 * @generated
+	 */
+	EReference getContact_Position();
+
+	/**
+	 * Returns the meta object for class '{@link addressbook.Position <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Position</em>'.
+	 * @see addressbook.Position
+	 * @generated
+	 */
+	EClass getPosition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link addressbook.Position#getX <em>X</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>X</em>'.
+	 * @see addressbook.Position#getX()
+	 * @see #getPosition()
+	 * @generated
+	 */
+	EAttribute getPosition_X();
+
+	/**
+	 * Returns the meta object for the attribute '{@link addressbook.Position#getY <em>Y</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Y</em>'.
+	 * @see addressbook.Position#getY()
+	 * @see #getPosition()
+	 * @generated
+	 */
+	EAttribute getPosition_Y();
+
+	/**
+	 * Returns the meta object for the attribute '{@link addressbook.Position#getW <em>W</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>W</em>'.
+	 * @see addressbook.Position#getW()
+	 * @see #getPosition()
+	 * @generated
+	 */
+	EAttribute getPosition_W();
+
+	/**
+	 * Returns the meta object for the attribute '{@link addressbook.Position#getH <em>H</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>H</em>'.
+	 * @see addressbook.Position#getH()
+	 * @see #getPosition()
+	 * @generated
+	 */
+	EAttribute getPosition_H();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -347,6 +506,14 @@ public interface AddressbookPackage extends EPackage {
 		EReference GROUP__CONTACTS = eINSTANCE.getGroup_Contacts();
 
 		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GROUP__POSITION = eINSTANCE.getGroup_Position();
+
+		/**
 		 * The meta object literal for the '{@link addressbook.impl.ContactImpl <em>Contact</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -363,6 +530,56 @@ public interface AddressbookPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONTACT__NAME = eINSTANCE.getContact_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTACT__POSITION = eINSTANCE.getContact_Position();
+
+		/**
+		 * The meta object literal for the '{@link addressbook.impl.PositionImpl <em>Position</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see addressbook.impl.PositionImpl
+		 * @see addressbook.impl.AddressbookPackageImpl#getPosition()
+		 * @generated
+		 */
+		EClass POSITION = eINSTANCE.getPosition();
+
+		/**
+		 * The meta object literal for the '<em><b>X</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POSITION__X = eINSTANCE.getPosition_X();
+
+		/**
+		 * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POSITION__Y = eINSTANCE.getPosition_Y();
+
+		/**
+		 * The meta object literal for the '<em><b>W</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POSITION__W = eINSTANCE.getPosition_W();
+
+		/**
+		 * The meta object literal for the '<em><b>H</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POSITION__H = eINSTANCE.getPosition_H();
 
 	}
 

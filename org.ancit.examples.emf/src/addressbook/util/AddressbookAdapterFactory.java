@@ -80,6 +80,10 @@ public class AddressbookAdapterFactory extends AdapterFactoryImpl {
 				return createContactAdapter();
 			}
 			@Override
+			public Adapter casePosition(Position object) {
+				return createPositionAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -138,6 +142,20 @@ public class AddressbookAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createContactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link addressbook.Position <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see addressbook.Position
+	 * @generated
+	 */
+	public Adapter createPositionAdapter() {
 		return null;
 	}
 

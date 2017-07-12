@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link addressbook.Group#getName <em>Name</em>}</li>
  *   <li>{@link addressbook.Group#getContacts <em>Contacts</em>}</li>
+ *   <li>{@link addressbook.Group#getPosition <em>Position</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,5 +66,31 @@ public interface Group extends EObject {
 	 * @generated
 	 */
 	EList<Contact> getContacts();
+
+	/**
+	 * Returns the value of the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Position</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Position</em>' containment reference.
+	 * @see #setPosition(Position)
+	 * @see addressbook.AddressbookPackage#getGroup_Position()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Position getPosition();
+
+	/**
+	 * Sets the value of the '{@link addressbook.Group#getPosition <em>Position</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Position</em>' containment reference.
+	 * @see #getPosition()
+	 * @generated
+	 */
+	void setPosition(Position value);
 
 } // Group

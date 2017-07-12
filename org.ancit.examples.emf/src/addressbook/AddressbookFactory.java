@@ -49,6 +49,15 @@ public interface AddressbookFactory extends EFactory {
 	Contact createContact();
 
 	/**
+	 * Returns a new object of class '<em>Position</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Position</em>'.
+	 * @generated
+	 */
+	Position createPosition();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

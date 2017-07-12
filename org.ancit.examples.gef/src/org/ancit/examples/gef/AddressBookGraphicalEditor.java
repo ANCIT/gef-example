@@ -8,6 +8,7 @@ import org.eclipse.gef.ui.parts.GraphicalEditor;
 
 import addressbook.AddressBook;
 import addressbook.AddressbookFactory;
+import addressbook.Contact;
 
 public class AddressBookGraphicalEditor extends GraphicalEditor {
 
@@ -18,6 +19,9 @@ public class AddressBookGraphicalEditor extends GraphicalEditor {
 	@Override
 	protected void initializeGraphicalViewer() {
 		AddressBook book = AddressbookFactory.eINSTANCE.createAddressBook();
+		Contact contact = AddressbookFactory.eINSTANCE.createContact();
+		contact.setName("ABC");
+		book.getContacts().add(contact);
 		
 		GraphicalViewer graphicalViewer = getGraphicalViewer();
 		graphicalViewer.setEditPartFactory(new AddressBookEditPartFactory());

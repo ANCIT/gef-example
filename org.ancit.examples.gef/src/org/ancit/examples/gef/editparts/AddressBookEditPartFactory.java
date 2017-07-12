@@ -4,6 +4,7 @@ import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPartFactory;
 
 import addressbook.AddressBook;
+import addressbook.Contact;
 
 public class AddressBookEditPartFactory implements EditPartFactory {
 
@@ -12,8 +13,9 @@ public class AddressBookEditPartFactory implements EditPartFactory {
 		EditPart ep = null;
 		
 		if (model instanceof AddressBook) {
-			ep = new AddressBookEditPart();
-			
+			ep = new AddressBookEditPart();			
+		} else if (model instanceof Contact) {
+			ep = new ContactEditPart();
 		}
 		
 		ep.setModel(model);		

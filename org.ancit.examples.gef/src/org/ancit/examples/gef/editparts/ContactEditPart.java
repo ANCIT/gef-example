@@ -4,7 +4,11 @@ import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.geometry.Rectangle;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.gef.editparts.AbstractGraphicalEditPart;
+
+import addressbook.Contact;
 
 public class ContactEditPart extends AbstractGraphicalEditPart {
 
@@ -13,8 +17,23 @@ public class ContactEditPart extends AbstractGraphicalEditPart {
 		RectangleFigure figure = new RectangleFigure();
 		figure.setOpaque(true);
 		figure.setBackgroundColor(ColorConstants.orange);
-		figure.setBounds(new Rectangle(10, 10, 100, 100));
+		
+		Contact contact = (Contact)getModel();
+		contact.eAdapters().add(new AdapterImpl(){
+			@Override
+			public void notifyChanged(Notification msg) {
+				refreshVisuals();
+			}
+		});
+		
+		figure.setBounds(new Rectangle(contact.getPosition().getX(), contact.getPosition().getY(), contact.getPosition().getW(), contact.getPosition().getH()));
 		return figure;
+	}
+	
+	@Override
+	protected void refreshVisuals() {
+		Contact contact = (Contact)getModel();
+		figure.setBounds(new Rectangle(contact.getPosition().getX(), contact.getPosition().getY(), contact.getPosition().getW(), contact.getPosition().getH()));
 	}
 
 	@Override

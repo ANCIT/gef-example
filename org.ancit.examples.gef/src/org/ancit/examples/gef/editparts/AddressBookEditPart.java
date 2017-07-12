@@ -6,6 +6,8 @@ import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.FreeformLayer;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.XYLayout;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.editparts.AbstractGraphicalEditPart;
 
@@ -19,6 +21,15 @@ public class AddressBookEditPart extends AbstractGraphicalEditPart {
 		layer.setOpaque(true);
 		layer.setBackgroundColor(ColorConstants.red);
 		layer.setLayoutManager(new XYLayout());
+		
+		AddressBook book = ((AddressBook)getModel());
+		book.eAdapters().add(new AdapterImpl() {
+			@Override
+			public void notifyChanged(Notification msg) {
+				refreshChildren();
+			}
+		});
+		
 		return layer;
 	}
 
